@@ -7,7 +7,7 @@
     <script src="colors.js"></script>
   </head>
   <body>
-    <h1><a href="index.html">WEB</a></h1>
+    <h1><a href="#!welcome">WEB</a></h1>
     <input
       id="night_day"
       type="button"
@@ -16,17 +16,7 @@
     nightDayHandler(this);
   "
     />
-    <ol>
-      <li>
-        <a onclick="fetchPage('html')">HTML</a>
-      </li>
-      <li>
-        <a onclick="fetchPage('css')">CSS</a>
-      </li>
-      <li>
-        <a onclick="fetchPage('javascript')">JavaScript</a>
-      </li>
-    </ol>
+    <ol id="nav"></ol>
     <article></article>
     <script>
       function fetchPage(name) { // name을 매개변수로 한다
@@ -36,6 +26,34 @@
           })
         })
       }
+
+      //해시뱅을 만든 url을 다른사람에게 공유하면 서로 같은 화면을 볼 수 있게 하기
+      if(location.hash) {
+        fetchPage(location.hash.substr(2));
+      } else {
+        fetchPage('welcome');
+      }
+      fetch('list').then(function (response) { // 들어온 name을 인자로 넣어준다
+          response.text().then(function (text) {
+            console.log(text);
+            // how to make arrray from string in javascipt 검색
+            var items = text.split(','); // ,를 기준으로 쪼개서 배열이 된다.
+            var  i = 0;
+            var tags = '';
+            while(i<items.length) {
+              var item = items[i];
+              console.log(item);
+              item = item.trim(); // trim으로 개행문자와 공백을 제거해준다
+              var tag = '<li><a href="#!' + item+'" onclick="fetchPage(\''+item+'\')">'+item+'</a></li>'
+              console.log(tag);
+              tags = tags + tag;
+              i = i + 1;
+            }
+            console.log(items);
+
+            document.querySelector('#nav').innerHTML = tags
+          })
+        })
     </script>
   </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+		<a href="#three">three</a> 
+		<!-- a태그로 아이디를 주면 해당 아이디로 포커스된다. -->
+		<!-- 해시값이 무엇이냐에 따라 시작페이지를 세팅할 수 있다 -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+      temporibus atque cumque expedita dolores adipisci. Ullam sequi at iure
+      asperiores sint doloribus obcaecati sit. Ipsum qui sequi culpa veniam
+      iusto non magni itaque iste dolorem, vitae in praesentium a officiis sit
+      eum nulla laboriosam architecto similique atque? Autem ut iure odit, minus
+      laudantium eum temporibus non perferendis beatae aperiam ipsam fuga
+      tempora similique dicta necessitatibus tenetur exercitationem consectetur
+      eos eius. Laudantium quaerat libero reprehenderit possimus, maiores eum
+      minima quos ex beatae nam omnis illum nihil consectetur delectus
+      necessitatibus eius in sint exercitationem reiciendis, maxime, magni rerum
+      voluptas. Voluptas, ducimus sint.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero velit quas
+      eum. Voluptatum voluptatibus aut saepe, aspernatur sit asperiores
+      molestiae quis, est reiciendis modi, quia consequuntur sunt officiis
+      fugiat explicabo dignissimos cupiditate fugit. Excepturi fuga possimus
+      labore, mollitia, est quasi, quam earum eius vitae incidunt recusandae rem
+      neque necessitatibus doloribus. Beatae harum, quisquam placeat, nemo
+      quidem tempora nostrum veniam incidunt delectus unde quam fugit dolor
+      voluptatum ipsa, doloremque dicta. Illum, sed nihil! Provident quam
+      possimus exercitationem nihil iure sequi aliquid autem cum alias molestiae
+      sed, quibusdam commodi ex nostrum perferendis corporis. Ipsa aliquam velit
+      totam earum dignissimos itaque incidunt in!
+    </p>
+		<!-- url 에 접근하는 것을 해시라고 한다. 주소창에 #three를 추가하면 아이디에 포커스된다 -->
+    <p id="three"> 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam corporis
+      error ipsum dicta fuga velit adipisci hic soluta, minima neque a fugit
+      enim molestiae? Mollitia est illum inventore quos illo animi eius.
+      Corporis quisquam repudiandae labore veritatis error et consectetur fugit
+      saepe odio sapiente id, distinctio quibusdam ipsa maxime quidem, hic
+      recusandae necessitatibus animi facere deserunt nulla a odit. Sint
+      expedita consequuntur explicabo possimus reiciendis delectus iusto,
+      commodi quibusdam illum repellat deserunt officiis tenetur nihil eligendi
+      excepturi sequi dolor. Unde aspernatur nesciunt distinctio dolores.
+      Perferendis, voluptate sint possimus asperiores iusto ratione ut deserunt
+      corporis nostrum eos porro quod mollitia labore.
+    </p>
+		<script>
+			// how to get hash from url javascript 검색
+			// 크롬 콘솔에서 location.hash를 치면 브라우저의 해시값이 나온다.
+			if(location.hash) {
+				// hash가 있으면 콘솔에 해시 출력
+				console.log(location.hash.substr(1)); // #뒤의 값만 가져오기
+				// javascript how to get substring 검색하면 #을 지울 수 있다
+				
+			// Fragment exists
+			} else {
+			// Fragment doesn't exist
+			}
+		</script>
+  </body>
+</html>
